@@ -22,8 +22,8 @@ namespace CashRegister
         double subTotal;
         double taxAmount;
         double totalPrice;
-
-
+        double tenderInput;
+        double moneyAmount;
 
 
         public Form1()
@@ -54,5 +54,24 @@ namespace CashRegister
                 totalOutput.Text = "";
             }
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                tenderInput = Convert.ToInt32(tenderedInput.Text);
+
+                moneyAmount = (tenderInput - totalPrice);
+
+                changeOutput.Text = moneyAmount.ToString("C");
+
+            }
+            catch
+            {
+                changeOutput.Text = "ERROR";
+            }
+        }
     }
 }
+          
+    
