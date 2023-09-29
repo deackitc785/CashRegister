@@ -85,7 +85,6 @@ namespace CashRegister
             printOutput.Text += $"\n\nTendered    ${tenderInput}";
             printOutput.Text += $"\nChange    ${moneyAmount}";
             printOutput.Text += $"\n\nHave a Nice Day";
-
         }
     }
 }
