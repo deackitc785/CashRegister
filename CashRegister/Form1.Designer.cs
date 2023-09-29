@@ -44,11 +44,11 @@
             this.tenderedLabel = new System.Windows.Forms.Label();
             this.calculateButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.printButton = new System.Windows.Forms.Button();
             this.changeLabel = new System.Windows.Forms.Label();
             this.changeOutput = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
+            this.printOutput = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
@@ -75,9 +75,9 @@
             // 
             // tenderedInput
             // 
-            this.tenderedInput.Location = new System.Drawing.Point(165, 302);
+            this.tenderedInput.Location = new System.Drawing.Point(165, 313);
             this.tenderedInput.Name = "tenderedInput";
-            this.tenderedInput.Size = new System.Drawing.Size(100, 22);
+            this.tenderedInput.Size = new System.Drawing.Size(74, 22);
             this.tenderedInput.TabIndex = 3;
             // 
             // burgerLabel
@@ -164,7 +164,7 @@
             // tenderedLabel
             // 
             this.tenderedLabel.AutoSize = true;
-            this.tenderedLabel.Location = new System.Drawing.Point(55, 302);
+            this.tenderedLabel.Location = new System.Drawing.Point(44, 319);
             this.tenderedLabel.Name = "tenderedLabel";
             this.tenderedLabel.Size = new System.Drawing.Size(67, 16);
             this.tenderedLabel.TabIndex = 13;
@@ -182,27 +182,28 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(77, 325);
+            this.button2.Location = new System.Drawing.Point(43, 341);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(123, 23);
+            this.button2.Size = new System.Drawing.Size(185, 23);
             this.button2.TabIndex = 15;
             this.button2.Text = "Calculate Change";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // button3
+            // printButton
             // 
-            this.button3.Location = new System.Drawing.Point(101, 392);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "button3";
-            this.button3.UseVisualStyleBackColor = true;
+            this.printButton.Location = new System.Drawing.Point(47, 392);
+            this.printButton.Name = "printButton";
+            this.printButton.Size = new System.Drawing.Size(181, 23);
+            this.printButton.TabIndex = 16;
+            this.printButton.Text = "Print Receipt";
+            this.printButton.UseVisualStyleBackColor = true;
+            this.printButton.Click += new System.EventHandler(this.printButton_Click);
             // 
             // changeLabel
             // 
             this.changeLabel.AutoSize = true;
-            this.changeLabel.Location = new System.Drawing.Point(55, 360);
+            this.changeLabel.Location = new System.Drawing.Point(44, 373);
             this.changeLabel.Name = "changeLabel";
             this.changeLabel.Size = new System.Drawing.Size(54, 16);
             this.changeLabel.TabIndex = 17;
@@ -211,7 +212,7 @@
             // changeOutput
             // 
             this.changeOutput.AutoSize = true;
-            this.changeOutput.Location = new System.Drawing.Point(159, 360);
+            this.changeOutput.Location = new System.Drawing.Point(200, 373);
             this.changeOutput.Name = "changeOutput";
             this.changeOutput.Size = new System.Drawing.Size(28, 16);
             this.changeOutput.TabIndex = 18;
@@ -228,20 +229,19 @@
             this.label13.Text = "Burger Town";
             this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // label1
+            // printOutput
             // 
-            this.label1.Location = new System.Drawing.Point(265, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 331);
-            this.label1.TabIndex = 20;
-            this.label1.Text = "label1";
+            this.printOutput.Location = new System.Drawing.Point(260, 61);
+            this.printOutput.Name = "printOutput";
+            this.printOutput.Size = new System.Drawing.Size(182, 331);
+            this.printOutput.TabIndex = 20;
             // 
             // label2
             // 
             this.label2.BackColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(254, 155);
+            this.label2.Location = new System.Drawing.Point(55, 295);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(184, 18);
+            this.label2.Size = new System.Drawing.Size(184, 14);
             this.label2.TabIndex = 21;
             // 
             // Form1
@@ -250,11 +250,11 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(488, 418);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.printOutput);
             this.Controls.Add(this.label13);
             this.Controls.Add(this.changeOutput);
             this.Controls.Add(this.changeLabel);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.printButton);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.calculateButton);
             this.Controls.Add(this.tenderedLabel);
@@ -296,11 +296,11 @@
         private System.Windows.Forms.Label tenderedLabel;
         private System.Windows.Forms.Button calculateButton;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button printButton;
         private System.Windows.Forms.Label changeLabel;
         private System.Windows.Forms.Label changeOutput;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label printOutput;
         private System.Windows.Forms.Label label2;
     }
 }

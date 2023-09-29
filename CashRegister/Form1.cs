@@ -12,9 +12,9 @@ namespace CashRegister
 {
     public partial class Form1 : Form
     {
-        double burgersPrice = 3.25;
-        double fryPrice = 2.25;
-        double drinksprice = 1.25;
+        double burgersPrice = 3;
+        double fryPrice = 2;
+        double drinksPrice = 1;
         int burgersInput = 1;
         int fryInput = 1;
         int drinksInput = 1;
@@ -36,10 +36,10 @@ namespace CashRegister
             try
             {
                 burgersInput = Convert.ToInt32(burgerInput.Text);
-                fryPrice = Convert.ToInt32(friesInput.Text);
-                drinksprice = Convert.ToInt32(drinkInput.Text);
+                fryInput = Convert.ToInt32(friesInput.Text);
+                drinksInput = Convert.ToInt32(drinkInput.Text);
 
-                subTotal = (burgersPrice * burgersInput + fryPrice * fryInput + drinksprice * drinksInput);
+                subTotal = (burgersPrice * burgersInput + fryPrice * fryInput + drinksPrice * drinksInput);
                 taxAmount = (subTotal * taxRate);
                 totalPrice = (subTotal + taxAmount);
 
@@ -70,6 +70,22 @@ namespace CashRegister
             {
                 changeOutput.Text = "ERROR";
             }
+        }
+
+        private void printButton_Click(object sender, EventArgs e)
+        {         
+            printOutput.Text = $"Burger Time Inc.";
+            printOutput.Text += $"\n\nOrder Number 1076\nOctober 4, 2012";
+            printOutput.Text += $"\n\nHamburger   x{burgersInput} @ {burgersPrice}";
+            printOutput.Text += $"\nFries   x{fryInput} @ {fryPrice}";
+            printOutput.Text += $"\nDrinks   x{drinksInput} @ {drinksPrice}";
+            printOutput.Text += $"\n\nSub Total    ${subTotal}";
+            printOutput.Text += $"\nTax    ${taxAmount}";
+            printOutput.Text += $"\nTotal    ${totalPrice}";
+            printOutput.Text += $"\n\nTendered    ${tenderInput}";
+            printOutput.Text += $"\nChange    ${moneyAmount}";
+            printOutput.Text += $"\n\nHave a Nice Day";
+
         }
     }
 }
